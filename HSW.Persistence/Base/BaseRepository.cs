@@ -20,7 +20,7 @@ namespace HSW.Persistence.Base
             _context = context;
             Entity = _context.Set<TEntity>();
         }
-        public async Task<OperationResult> Createasync(TEntity entity)
+        public virtual async Task<OperationResult> Createasync(TEntity entity)
         {
             OperationResult result = new OperationResult();
             try
@@ -37,7 +37,7 @@ namespace HSW.Persistence.Base
             return result;
         }
 
-        public async Task<OperationResult> Findasync(Expression<Func<TEntity, bool>> filter)
+        public virtual async Task<OperationResult> Findasync(Expression<Func<TEntity, bool>> filter)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace HSW.Persistence.Base
             }
         }
 
-        public async Task<OperationResult> GetAllasync(Expression<Func<TEntity, bool>> filter)
+        public virtual async Task<OperationResult> GetAllasync(Expression<Func<TEntity, bool>> filter)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace HSW.Persistence.Base
             }
         }
 
-        public async Task<OperationResult> GetbyIdasync(int id)
+        public virtual async Task<OperationResult> GetbyIdasync(int id)
         {
             OperationResult result = new OperationResult();
             try
@@ -88,7 +88,7 @@ namespace HSW.Persistence.Base
             return result;
         }
 
-        public async Task<OperationResult> Removeasync(TEntity entity)
+        public virtual async Task<OperationResult> Removeasync(TEntity entity)
         {
             OperationResult result = new OperationResult();
             try
@@ -105,7 +105,7 @@ namespace HSW.Persistence.Base
             return result;
         }
 
-        public async Task<OperationResult> Updateasync(TEntity entity)
+        public virtual async Task<OperationResult> Updateasync(TEntity entity)
         {
             OperationResult result = new OperationResult();
             try

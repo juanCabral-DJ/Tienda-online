@@ -7,16 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HSW.Application\HSW.Application.csproj" />
     <ProjectReference Include="..\HSW.Domain\HSW.Domain.csproj" />
+    <ProjectReference Include="..\HSW.Infrastructure\HSW.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
