@@ -54,7 +54,7 @@ namespace HSW.Persistence.Repositories
 
                 if (id <= 0)
                 {
-                    return OperationResult.Failure("El id tiene que ser positivo");
+                    return OperationResult.Failure("El id tiene que ser positivo y mayor a 0");
                 }
 
                 var entity = await base.GetbyIdasync(id);
@@ -197,7 +197,7 @@ namespace HSW.Persistence.Repositories
             catch (Exception e)
             {
                 _Logger.LogError("Error retornando el pedido que cumpla con la condicion", e);
-                result = OperationResult.Failure("A ocurrido un error Retornando el pedido que cumpla con la condicion.");
+                result = OperationResult.Failure("A ocurrido un error Retornando el pedido que cumpla con la condicion o este cliente no existe.");
             }
 
             return result;
