@@ -60,7 +60,7 @@ namespace HSW.Persistence.Repositories
 
                 var entity = await base.GetbyIdasync(id);
 
-                result = OperationResult.Success("Retrieving Address entity", entity.Data);
+                result = OperationResult.Success("Retrieving usuario entity", entity.Data);
 
             }
             catch (Exception ex)
@@ -116,7 +116,7 @@ namespace HSW.Persistence.Repositories
                 if (entity == null)
                 {
                     _Logger.LogError("Attempted to add a null usuario entity.");
-                    return OperationResult.Failure("Address entity cannot be null.");
+                    return OperationResult.Failure("usuario entity cannot be null.");
                 }
 
                 return await base.Createasync(entity);

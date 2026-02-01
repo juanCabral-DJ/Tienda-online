@@ -1,0 +1,6 @@
+@Hilly_StoreAPI_HostAddress = http://localhost:5191
+
+GET {{Hilly_StoreAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

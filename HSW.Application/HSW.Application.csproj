@@ -10,4 +10,13 @@
     <ProjectReference Include="..\HSW.Domain\HSW.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extesion\Validation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.4.1" />
+    <PackageReference Include="FluentValidation" Version="8.1.1" />
+  </ItemGroup>
+
 </Project>
